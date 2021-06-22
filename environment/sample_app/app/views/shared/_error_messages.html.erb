@@ -1,0 +1,16 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      <%# 
+        pluralize: 1つ目の引数が１だったら単数形、それ以外だったら複数形を返す 
+                    和訳すると「複数を示す文法的な形態素の付いた印」
+      %>
+      The form contains <%= pluralize(@user.errors.count, "error") %>
+    </div>
+    <ul>
+      <% @user.erros.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
