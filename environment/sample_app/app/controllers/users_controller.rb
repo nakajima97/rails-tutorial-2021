@@ -18,6 +18,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   private
     # 1個ネストが深いのはprivateを分かりやすくするための慣習
     def user_params
