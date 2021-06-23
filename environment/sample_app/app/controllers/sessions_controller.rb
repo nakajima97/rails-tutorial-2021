@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
     # 「&.」はJSの「.?」
     if user && user&.authenticate(params[:session][:password])
       log_in user
-      params[:session][:remember_me] == '1' ? remember_me(user) : forget(user)
-      redirect_to user
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+      redirect_back_or user
     else
       # メッセージ表示後になんかしらのリクエストが発生したら消える
       flash.now[:danger] = 'Invalid email/password combination'
