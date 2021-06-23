@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   # URL + RESTfulなリソースへのアクセスを可能にする
   resources :users
+  resources :account_activations, only: [:edit]
 end

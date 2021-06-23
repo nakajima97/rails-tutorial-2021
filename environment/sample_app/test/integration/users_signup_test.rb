@@ -1,6 +1,10 @@
 require "test_helper"
 
 class UsersSignupTest < ActionDispatch::IntegrationTest
+  def setup
+    ActionMailer::Base.deliveries.clear
+  end
+
   test "invalid signup information" do
     get signup_path
     # 下記エラーが表示される。原因不明なので放置
