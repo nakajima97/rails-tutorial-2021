@@ -5,7 +5,9 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.paginate(page: params[:page])
+    # @users = User.paginate(page: params[:page])
+    # viewでpaginateが動かないので件数を直接制御
+    @users = User.paginate(page: 1)
   end
 
   def show
