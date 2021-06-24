@@ -31,7 +31,10 @@ gem 'bootstrap-sass', '3.4.1'
 
 gem 'rexml'
 gem 'faker'
-gem 'will_paginate',           '3.1.8'
+gem 'will_paginate', '3.1.8'
+gem 'active_storage_validations'
+gem 'image_processing'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
