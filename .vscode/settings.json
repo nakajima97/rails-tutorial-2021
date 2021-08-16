@@ -6,5 +6,6 @@
     "editor.formatOnSave": false
   },
   "ruby.format": "rubocop",
-  "editor.formatOnSaveTimeout": 5000
+  "editor.formatOnSaveTimeout": 5000,
+  "ruby.intellisense": "rubyLocate"
 }
